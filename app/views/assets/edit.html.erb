@@ -1,0 +1,15 @@
+<h1>Edit Asset</h1>
+
+<%= form_for @asset, method: :put do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :video %>
+    <%= f.file_field :video %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>  
+<% end %>  

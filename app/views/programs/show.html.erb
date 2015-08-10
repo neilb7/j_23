@@ -1,0 +1,18 @@
+<div class="container">
+  <h1><%= @program.name %></h1>
+  <p><%= @program.desc %></p>
+
+  <%= render 'modal' %>
+
+  <%= render 'day' %>
+
+  <br>
+  <div class="container">
+  <% if admin_signed_in? %>
+    <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Day</button></p>
+    <p><%= link_to "Edit Program", edit_program_path(@program), class: "btn btn-warning" %>
+    <%= link_to "Destroy Program", @program, method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-danger" %></p>
+  <% end %>  
+  <p><%= link_to "All Programs", programs_path %></p>
+  </div>
+</div>

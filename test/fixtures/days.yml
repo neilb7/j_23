@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  day_number: 1
+  info: MyText
+  program_id: 
+
+two:
+  day_number: 1
+  info: MyText
+  program_id: 
