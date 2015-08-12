@@ -1,4 +1,4 @@
-<h1><%= @day.day_number %></h1>
-<p><%= @day.info %></p>
+<h1>Day Number :<%= @day.day_number %> of <%= @program.name %></h1>
+<p>General Info :<%= @day.info %></p>
 
 <%= link_to "Back To #{@program.name}", program_path(@program) %>

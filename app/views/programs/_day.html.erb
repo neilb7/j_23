@@ -3,7 +3,7 @@
   <div class="col-md-3 col-lg-3 col-sm-6" id="day_<%= day.id %>">
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <p><%= day.day_number %></p>
+        <p>Day :<%= day.day_number %></p>
       </div>
       <div class="panel-body">
         <p><%= day.info %></p>
@@ -11,10 +11,12 @@
       <div class="panel-footer">
         <div class="btn btn-group">
           <%= link_to "Show", [day.program, day], class: "btn btn-success" %>
+      <% if admin_signed_in? %>
           <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#updateday" >Edit</button>
           <%= link_to "Destroy", [day.program, day], method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-danger" %>
+      <% end %> 
         </div>
-      </div> 
+      </div>
     </div>
     </div>
   <% end %>

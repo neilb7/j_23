@@ -2,6 +2,10 @@
   <%= link_to "Sign Out", destroy_admin_session_path, method: :delete %><br>
   <%= link_to "Programs", programs_path %>
   <%= link_to "Assets", assets_path %>
+<% end %>
+<% if user_signed_in? %>
+  <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>  <br>
+  <%= link_to "Programs", programs_path %>
 <% else %>
-  <%= link_to "Sign In", new_admin_session_path %>  
+  <%= link_to "User Sign In", new_user_session_path %>  
 <% end %>
