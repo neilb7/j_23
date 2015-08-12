@@ -1,5 +1,5 @@
 <h1><%= @asset.name %></h1>
 
-<%= video_tag @asset.video.url if @asset.video_stored? %>
+<% if @asset.video_stored? %><%= video_tag @asset.video.url, controls: :true %><% end %>
 
 <p><%= link_to "Back To Assets", assets_path, class: "btn btn-primary" %><p>

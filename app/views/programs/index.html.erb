@@ -16,6 +16,7 @@
           <td><%= link_to "Show", program_path(program) %></td>
         <% end %>
         <% if admin_signed_in? %>
+          <td><%= link_to "Show", program_path(program) %></td>
           <td><%= link_to "Edit", edit_program_path(program) %></td>
           <td><%= link_to "Destroy", program, method: :delete, data: { confirm: "Are you sure?"} %></td>
         <% end %>  

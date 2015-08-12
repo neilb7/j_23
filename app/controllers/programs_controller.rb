@@ -41,6 +41,6 @@ class ProgramsController < ApplicationController
 
   private
     def program_params
-      params.require(:program).permit(:name, :desc, days: [:day_numnber, :info])
+      params.require(:program).permit(:name, :desc, days: [:day_number, :info])
     end
 end

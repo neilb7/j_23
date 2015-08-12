@@ -11,7 +11,7 @@
       <div class="panel-footer">
         <div class="btn btn-group">
           <%= link_to "Show", [day.program, day], class: "btn btn-success" %>
-          <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myupdateday_<%= day.id %>" >Edit</button>
+          <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#updateday" >Edit</button>
           <%= link_to "Destroy", [day.program, day], method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-danger" %>
         </div>
       </div> 
@@ -20,8 +20,8 @@
   <% end %>
 </div>
 
-<%= form_for([@program, @program.days.build], method: :patch) do |f| %>
-<div class="modal fade" id="" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<%= form_for([@program, @program.days.build]) do |f| %>
+<div class="modal fade" id="#updateday" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -40,12 +40,8 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <%= submit_tag "Create", class: "btn btn-primary" %>
+        <%= submit_tag "Update", class: "btn btn-primary" %>
       </div>        
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>

@@ -1,5 +1,16 @@
 <h1>Editing Program</h1>
 
-<%= render 'modal' %>
-
+<%= form_for @program do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :desc %>
+    <%= f.text_area :desc %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>  
+<% end %>  
 <%= link_to "All Programs" %>
